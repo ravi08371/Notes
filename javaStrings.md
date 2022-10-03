@@ -130,4 +130,55 @@ public static void main(String[] args)
 }
  ```
  
+ <h1>Removing punctuations from a given string</h1>
+ 
+ ```java
+ public class Test
+{
+    public static void main(String[] args)
+    {
+        // input string
+        String str = "Welcome???@@##$ to#$% Geeks%$^for$%^&Geeks";
+         
+        // similar to Matcher.replaceAll
+        str = str.replaceAll("\\p{Punct}","");
+         
+        System.out.println(str);
+    }
+     
+}
+```
+
+<h1>Program to check if input is an integer or a string</h1>
+
+```java
+static boolean isNumber(String s)
+    {
+        for (int i = 0; i < s.length(); i++)
+            if (Character.isDigit(s.charAt(i)) == false)
+                return false;
+ 
+        return true;
+    }
+ 
+    // Driver code
+    static public void main(String[] args)
+    {
+        // Saving the input in a string
+        String str = "6790";
+ 
+        // Function returns 1 if all elements
+        // are in range '0 - 9'
+        if (isNumber(str))
+            System.out.println("Integer");
+ 
+        // Function returns 0 if the
+        // input is not an integer
+        else
+            System.out.println("String");
+    }
+    ```
+    
+    
+ 
  
