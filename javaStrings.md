@@ -177,8 +177,174 @@ static boolean isNumber(String s)
         else
             System.out.println("String");
     }
-    ```
+```
     
+    
+<h1>Java program to swap first and last characters of words in a sentence</h1>
+
+```java
+class SwapFirstLastCharacters {
+    static String count(String str)
+    {
+        // Create an equivalent char array
+        // of given string
+        char[] ch = str.toCharArray();
+        for (int i = 0; i < ch.length; i++) {
+ 
+            // k stores index of first character
+            // and i is going to store index of last
+            // character.
+            int k = i;
+            while (i < ch.length && ch[i] != ' ')
+                i++;
+             
+            // Swapping
+            char temp = ch[k];
+            ch[k] = ch[i - 1];
+            ch[i - 1] = temp;
+ 
+            // We assume that there is only one space
+            // between two words.
+        }
+        return new String(ch);
+    }
+    public static void main(String[] args)
+    {
+        String str = "geeks for geeks";
+        System.out.println(count(str));
+    }
+}
+```
+
+<h1>Get the first letter of each word in a string using regex</h1>
+
+```java
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+ 
+public class Test {
+    static void printFirst(String s)
+    {
+        Pattern p = Pattern.compile("\\b[a-zA-Z]");
+        Matcher m = p.matcher(s);
+ 
+        while (m.find())
+            System.out.print(m.group());
+ 
+        System.out.println();
+    }
+ 
+    public static void main(String[] args)
+    {
+        String s1 = "Geeks for Geeks";
+        String s2 = "A Computer Science Portal for Geeks";
+        printFirst(s1);
+        printFirst(s2);
+    }
+}
+```
+
+<h1>Reverse words in a given String in Java</h1>
+
+```java
+import java.util.regex.Pattern;
+public class Exp {
+ 
+    // Method to reverse words of a String
+    static String reverseWords(String str)
+    {
+ 
+        // Specifying the pattern to be searched
+        Pattern pattern = Pattern.compile("\\s");
+ 
+        // splitting String str with a pattern
+        // (i.e )splitting the string whenever their
+        // is whitespace and store in temp array.
+        String[] temp = pattern.split(str);
+        String result = "";
+ 
+        // Iterate over the temp array and store
+        // the string in reverse order.
+        for (int i = 0; i < temp.length; i++) {
+            if (i == temp.length - 1)
+                result = temp[i] + result;
+            else
+                result = " " + temp[i] + result;
+        }
+        return result;
+    }
+ 
+    
+    public static void main(String[] args)
+    {
+        String s1 = "Welcome to geeksforgeeks";
+        System.out.println(reverseWords(s1));
+ 
+        String s2 = "I love Java Programming";
+        System.out.println(reverseWords(s2));
+    }
+}
+
+Output
+geeksforgeeks to Welcome
+Programming Java love I
+```
+
+<h1>Reverse a String in Java 2 Methods</h1>
+<h4>1<sup>st</sup></h4>
+
+```java
+import java.io.*;
+import java.util.Scanner;
+  
+class GFG {
+    public static void main (String[] args) {
+        
+        String str= "Geeks", nstr="";
+        char ch;
+        
+      System.out.print("Original word: ");
+      System.out.println("Geeks"); //Example word
+        
+      for (int i=0; i<str.length(); i++)
+      {
+        ch= str.charAt(i); //extracts each character
+        nstr= ch+nstr; //adds each character in front of the existing string
+      }
+      System.out.println("Reversed word: "+ nstr);
+    }
+}
+```
+
+<h4>2<sup>nd</sup></h4>
+
+```java
+import java.lang.*;
+import java.io.*;
+import java.util.*;
+  
+// Class of ReverseString
+class ReverseString {
+    public static void main(String[] args)
+    {
+        String input = "GeeksForGeeks";
+  
+        // convert String to character array
+        // by using toCharArray
+        char[] try1 = input.toCharArray();
+  
+        for (int i = try1.length - 1; i >= 0; i--)
+            System.out.print(try1[i]);
+    }
+}
+```
+
+
+
+
+
+
+
     
  
  
