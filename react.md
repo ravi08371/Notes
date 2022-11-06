@@ -78,4 +78,6 @@ function App() {
 export default App;
 ```
 
+<h2>What is Event Bubbeling</h2>
+<p>Any event which get Triggers on a child event handlera on the parent get triggers automatically</p>
 
