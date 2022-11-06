@@ -35,3 +35,47 @@
 </ul>
 <h2>What is Event in React</h2>
 <p>An event is an action that could be triggered as a result of the user action or system generated event. For example, a mouse click, loading of a web page, pressing a key, window resizes, and other interactions are called events.</p>
+
+<h2><b>Question 1 :-</b>Create a react application that counts from 0 to 10 and vice-versa also changing the background depending on the value of the counter.</h2>
+
+```react
+import "./App.css";
+import { useState } from "react";
+
+function App() {
+  const [num, setNum] = useState(0);
+
+  const handleDecrement = () => {
+    setNum(num - 1);
+    document.getElementById("incre").style.backgroundColor = "purple";
+
+    if (num <= 0) {
+      setNum(0);
+    }
+  };
+  const handleIncrement = () => {
+    setNum(num + 1);
+    document.getElementById("incre").style.backgroundColor = "magenta";
+    if (num >= 5) {
+      document.getElementById("incre").style.backgroundColor = "orange";
+    }
+    if (num === 10) {
+      document.getElementById("incre").style.backgroundColor = "blue";
+    }
+    if (num >= 10) {
+      setNum(10);
+    }
+  };
+  return (
+    <div className="App">
+      <p id="incre">Preview: {num}</p>
+      <button onClick={handleIncrement}>Increment</button>
+      <button onClick={handleDecrement}>Decrement</button>
+    </div>
+  );
+}
+
+export default App;
+```
+
+
