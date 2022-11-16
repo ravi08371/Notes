@@ -81,3 +81,27 @@ export default App;
 <h2>What is Event Bubbeling</h2>
 <p>Any event which get Triggers on a child event handlera on the parent get triggers automatically</p>
 
+
+<h2>
+What are react Hooks
+</h2>
+<p>
+React Hooks are simple JavaScript functions that we can use to isolate the reusable part from a functional component. Hooks can be stateful and can manage side-effects.
+</p>
+<h2>
+React provides a bunch of standard in-built hooks:
+</h2>
+<ul>
+<li><b>useState:</b>To manage states. Returns a stateful value and an updater function to update it.
+</li>
+<li><b>useEffect:</b>To manage side-effects like API calls, subscriptions, timers, mutations, and more.</li>
+<li><b>useContext:</b>o return the current value for a context.</li>
+<li><b>useReducer:</b>A useState alternative to help with complex state management.</li>
+<li><b>useCallback:</b>It returns a memorized version of a callback to help a child component not re-render unnecessarily.</li>
+<li><b>useMemo:</b>It returns a memoized value that helps in performance optimizations.</li>
+<li><b>useRef:</b>It returns a ref object with a .current property. The ref object is mutable. It is mainly used to access a child component imperatively.</li>
+<li><b>useLayoutEffect:</b>It fires at the end of all DOM mutations. It's best to use useEffect as much as possible over this one as the useLayoutEffect fires synchronously.</li>
+<li><b>useDebugValue:</b>Helps to display a label in React DevTools for custom hooks.</li>
+
+</ul>
+
