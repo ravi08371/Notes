@@ -84,7 +84,31 @@ const addCurry =(a) => {
 console.log(addCurry(2)(3)(5)) // 10
 ```
 
+<h2>code to find most frequent number in array</h2>
 
+```javascript
+const arr = [1,2,5,3,5,7,3,4,2,5,6,5,2,5,5,5,7];
+//code to find most frequent number in array
+
+var mf = 1;
+var m = 0;
+var item;
+for (var i=0; i<arr.length; i++)
+{
+        for (var j=i; j<arr.length; j++)
+        {
+                if (arr[i] == arr[j])
+                 m++;
+                if (mf<m)
+                {
+                  mf=m; 
+                  item = arr[i];
+                }
+        }
+        m=0;
+}
+console.log(item+" ( " +mf +" times ) ") ;
+```
 
 
 
