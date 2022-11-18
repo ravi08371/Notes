@@ -112,11 +112,38 @@ console.log(item+" ( " +mf +" times ) ") ;
 
 
 
+<h2>What is JavsScript</h2>
+<p>JavaScript is a dynamic computer programming language. It is lightweight and most commonly used as a part of web pages, whose implementations allow client-side script to interact with the user and make dynamic pages. It is an interpreted programming language with object-oriented capabilities.</p>
 
+<h2>Advantages of JS</h2>
 
+<ul>
+ <li>JavaScript is a lightweight, interpreted programming language.</li>
+ <li>Designed for creating network-centric applications.</li>
+ <li>Complementary to and integrated with Java.</li>
+ <li>Complementary to and integrated with HTML.</li>
+ <li>Open and cross-platform</li>
+ <li>Immediate feedback to the visitors </li>
+ <li>Increased interactivity</li>
+ <li>Richer interfaces</li>
+</ul>
 
+<h2>What is JavaScript class</h2>
+<p>JavaScript Class is not an Object it is Template for JavaScript object. When we have class we can use class to create JavaScript object</p>
+<h4>Thats how we can construct class</h4>
 
+```javascript
+class car{
+  constructor(name,year){
+    this.name = name;
+    this.year = year;
+  }
+}
 
+//and thats how we can use classs to create JS Object 
+
+const car1 = new car("ford",2014);
+```
 
 
 
