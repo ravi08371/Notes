@@ -105,3 +105,5 @@ React provides a bunch of standard in-built hooks:
 
 </ul>
 
+<h2>What is useReduser</h2>
+<p>Reduser is a simple function which takes an existing state and based on the action it recieves it will return a new state.</p>
