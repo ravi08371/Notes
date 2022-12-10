@@ -146,9 +146,20 @@ const car1 = new car("ford",2014);
 ```
 
 
+<h2>Ques 1 : == vs ===</h2>
+<p>Both ==  and === will check for type. == will first do the type conversion if the type are not same and then it will start to compare them but in === there is no type conversion</p>
 
+<h2>Ques 2 : comaparision</h2>
 
+```javascript
+let arrayOne = [1,2,3];
+let arrayTwo = [1,2,3];
+ console.log(arrayOne == arrayTwo); // false
+ console.log(arrayOne === arrayTwo); // false  
+ //both anuswer false because it checks its reference
+```
 
+ 
 
 
 
