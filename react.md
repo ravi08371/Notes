@@ -119,7 +119,9 @@ function Button() {
 What are react Hooks
 </h2>
 <p>
-React Hooks are simple JavaScript functions that we can use to isolate the reusable part from a functional component. Hooks can be stateful and can manage side-effects.
+React Hooks are simple JavaScript functions that we can use to isolate the reusable part from a functional component. Hooks can be stateful and can manage side-effects.React hooks are a way to use state and other React features without writing a class. They were introduced in React 16.8 as a way to allow developers to use state and other React features in functional components, rather than just in class-based components.
+
+Functional components are components that are defined as JavaScript functions, rather than as classes. They are simple, easy to understand, and can make your code more readable and maintainable. However, before the introduction of hooks, functional components were not able to use state or other React features that required the component to have access to the component's instance (such as lifecycle methods).
 </p>
 <h2>
 React provides a bunch of standard in-built hooks:
