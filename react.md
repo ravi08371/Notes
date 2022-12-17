@@ -96,6 +96,8 @@ For example, consider a simple component that displays a button and a list of it
 
 You can use the event.stopPropagation() method to prevent an event from bubbling up the DOM hierarchy. This can be useful if you only want to handle the event at the element where it occurs, and not at any of the parent elements.</p>
 <p>Here's an example of how you might use event.stopPropagation() in a React component:</p>
+
+
 ```javascript
 import React from 'react';
 
