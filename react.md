@@ -141,4 +141,43 @@ React provides a bunch of standard in-built hooks:
 </ul>
 
 <h2>What is useReduser</h2>
-<p>Reduser is a simple function which takes an existing state and based on the action it recieves it will return a new state.</p>
+<p>useReducer is a hook in React that allows you to manage complex state in a functional component. It is similar to the reducer function in Redux, a popular library for managing application state.
+
+The useReducer hook takes two arguments: a reducer function and an initial state. The reducer function is a pure function that takes the current state and an action, and returns the new state. The initial state is the initial value for the state.
+
+Here's an example of how you might use the useReducer hook to manage a simple counter state:</p>
+
+
+```javascript
+import { useReducer } from 'react';
+
+function reducer(state, action) {
+  switch (action.type) {
+    case 'increment':
+      return { count: state.count + 1 };
+    case 'decrement':
+      return { count: state.count - 1 };
+    default:
+      throw new Error();
+  }
+}
+
+function Counter() {
+  const [state, dispatch] = useReducer(reducer, { count: 0 });
+
+  return (
+    <div>
+      <p>Count: {state.count}</p>
+      <button onClick={() => dispatch({ type: 'increment' })}>
+        Increment
+      </button>
+      <button onClick={() => dispatch({ type: 'decrement' })}>
+        Decrement
+      </button>
+    </div>
+  );
+}
+```
+
+
+
