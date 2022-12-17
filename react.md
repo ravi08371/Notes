@@ -79,7 +79,38 @@ export default App;
 ```
 
 <h2>What is Event Bubbeling</h2>
-<p>Any event which get Triggers on a child event handlera on the parent get triggers automatically</p>
+<p>Event bubbling is a term used to describe the way that events propagate, or "bubble," through the DOM (Document Object Model) hierarchy. When an event occurs on an element, it is first handled by that element, and then it is passed up the hierarchy of parent elements to be handled by each of those elements as well. This process is called event bubbling.
+
+For example, consider a simple component that displays a button and a list of items. The button and the list are wrapped in a div element, like this:</p>
+```javascript
+<div>
+  <button>Click me</button>
+  <ul>
+    <li>Item 1</li>
+    <li>Item 2</li>
+    <li>Item 3</li>
+  </ul>
+</div>
+```
+<p>If you attach an event handler to the button element, it will be called whenever the button is clicked. However, the event will also bubble up to the div element, and if you have attached an event handler to the div element, it will be called as well.
+
+You can use the event.stopPropagation() method to prevent an event from bubbling up the DOM hierarchy. This can be useful if you only want to handle the event at the element where it occurs, and not at any of the parent elements.</p>
+<p>Here's an example of how you might use event.stopPropagation() in a React component:</p>
+```javascript
+import React from 'react';
+
+function Button() {
+  function handleClick(event) {
+    console.log('Button was clicked!');
+    event.stopPropagation();
+  }
+
+  return (
+    <button onClick={handleClick}>Click me</button>
+  );
+}
+```
+
 
 
 <h2>
