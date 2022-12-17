@@ -23,7 +23,7 @@
 <p>Props, short for Properties in React Props, short for properties, allow the user to pass arguments or data to components. These props help make the components more dynamic. Props in a component are read-only and cannot be changed.</p>
 
 <h2>State in React </h2>
-<p>A state is an object that stores properties values for those attributed to a component that could change over some time</p>
+<p>A state is an object that stores properties values for those attributed to a component that could change over some time.State is an object that represents the variables or data that a React component needs to render its UI. It is an essential part of a React component, as it determines how a component will behave and what it will display. A component can update its own state, and when it does, the component's UI will be re-rendered to reflect the new state.</p>
 <h2>Why can't Browsers read JSX</h2>
 <p>Browsers can’t read JSX because there is no inherent implementation for the browser engines to read and understand them. JSX is not intended to be implemented by the engines or browsers, it is intended to be used by various transpilers to transform these JSX into valid JavaScript code.</p>
 <ul>
