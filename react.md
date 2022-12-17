@@ -179,5 +179,52 @@ function Counter() {
 }
 ```
 
+<h2>What is asynchronous programming </h2>
+<p>Asynchronous programming is a way of writing code that allows a program to perform multiple tasks concurrently, rather than sequentially. In asynchronous programming, a task is started and the program continues to run, rather than waiting for the task to complete.
 
+Asynchronous programming is useful when you need to perform tasks that take a long time to complete, such as making network requests, reading or writing to a database, or performing complex calculations. It allows the program to continue running and to perform other tasks while the long-running task is being executed, rather than blocking the program until the task is complete.
+
+There are several ways to perform asynchronous programming in JavaScript, including using promises, async/await, and callbacks.</p>
+
+<h2>What is async and await?</h2>
+<p>async and await are keywords in JavaScript that are used for working with asynchronous code. They allow you to write asynchronous code in a synchronous-looking style, using a structure similar to that of synchronous code.
+
+async is a keyword that is used to define an asynchronous function. An asynchronous function is a function that returns a promise, rather than a value. You can use the await keyword inside an asynchronous function to pause the execution of the function until a promise is resolved.
+
+Here's an example of how you might use async and await in a React component:</p>
+
+```javascript
+import React, { useState, useEffect } from 'react';
+
+async function fetchData() {
+  const response = await fetch('https://example.com/data');
+  const data = await response.json();
+  return data;
+}
+
+function Example() {
+  const [data, setData] = useState(null);
+
+  useEffect(() => {
+    async function loadData() {
+      const data = await fetchData();
+      setData(data);
+    }
+    loadData();
+  }, []);
+
+  return (
+    <div>
+      {data ? (
+        <p>{data.message}</p>
+      ) : (
+        <p>Loading...</p>
+      )}
+    </div>
+  );
+}
+```
+
+
+<p>In this example, the fetchData function is an asynchronous function that makes a network request to fetch some data. The Example component uses the useEffect hook to call the fetchData function when the component mounts, and the await keyword is used to pause the execution of the loadData function until the data is returned. The component displays a loading message while the data is being fetched, and the data message when it is available.</p>
 
