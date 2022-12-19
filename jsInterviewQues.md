@@ -156,6 +156,52 @@ function increment() {
 
 <p>It is generally recommended to use pure functions as much as possible, as they can make your code easier to understand and maintain.</p>
 
+<h2>What is the difference between an object and an array in JavaScript?</h2>
+<p>In JavaScript, an object is a collection of key-value pairs, while an array is an ordered list of elements.
+
+Here are some key differences between objects and arrays in JavaScript:
+
+Syntax: Objects are defined using curly braces {}, and the key-value pairs are separated by a colon. Arrays are defined using square brackets [].
+
+Property access: You can access the properties of an object using dot notation (object.property) or bracket notation (object['property']). Array elements are accessed using their index number in square brackets (array[index]).
+
+Order: Arrays maintain an order to the elements they contain, while the order of the properties in an object is not guaranteed.
+
+Built-in methods: Arrays have a number of built-in methods for manipulating their elements, such as push(), pop(), and shift(). Objects do not have these built-in methods, but you can add your own methods to objects using the object's prototype.</p>
+
+<h2>How do you handle errors in JavaScript?</h2>
+<p>Try-catch statements: You can use a try-catch statement to catch and handle errors that occur in a block of code. The try block contains the code that may throw an error, and the catch block contains the code to handle the error. For example:</p>
+
+
+```javascript
+try {
+  // code that may throw an error
+} catch (error) {
+  // code to handle the error
+}
+```
+
+<p>Throwing errors: You can throw your own errors using the throw statement. This is useful when you want to throw an error from a function if a certain condition is not met. For example:</p>
+
+```javascript
+function divide(a, b) {
+  if (b === 0) {
+    throw new Error('Cannot divide by 0');
+  }
+  return a / b;
+}
+```
+
+<p>Using the onerror event: You can use the onerror event to handle errors that occur in your JavaScript code. The onerror event is triggered when an error occurs and allows you to specify a function to run when the event occurs. For example:</p>
+
+```javascript
+window.onerror = function(error) {
+  // code to handle the error
+}
+```
+
+
+
 
 
 
