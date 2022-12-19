@@ -269,6 +269,92 @@ getDataFromAPI().then((data) => {
 ```
 
 
+<h2>Can you describe the difference between a "class" and an "object" in JavaScript?</h2>
+<p>In JavaScript, a "class" is a template for creating objects. It's a way to define the structure and behavior of an object in a single place, which can then be used to create multiple instances of that object. Classes are introduced in JavaScript with the class keyword in ECMAScript 2015 (also known as ECMAScript 6).
+
+Here's an example of a simple class in JavaScript:</p>
+
+
+```javascript
+class Person {
+  constructor(name, age) {
+    this.name = name;
+    this.age = age;
+  }
+
+  sayHello() {
+    console.log(`Hello, my name is ${this.name} and I am ${this.age} years old.`);
+  }
+}
+```
+
+
+<p>This class defines a Person object with a name and an age, and a method called sayHello that logs a greeting to the console. To create an instance of this class, you can use the new keyword:</p>
+
+
+```javascript
+const person1 = new Person('Alice', 30);
+const person2 = new Person('Bob', 35);
+```
+
+<p>An "object" in JavaScript is a collection of properties, each of which has a name and a value. An object can also have methods, which are functions that are associated with the object. You can create an object in JavaScript using the {} notation:</p>
+
+```javascript
+const person = {
+  name: 'Alice',
+  age: 30,
+  sayHello: function() {
+    console.log(`Hello, my name is ${this.name} and I am ${this.age} years old.`);
+  }
+};
+```
+
+<p>In this example, the person object has three properties: name, age, and sayHello. The sayHello property is a method that logs a greeting to the console.
+
+Classes provide a way to create objects with a specific structure and behavior in a more organized and reusable way than using object literals. However, you can also use object literals to create objects in JavaScript, and they are often used in conjunction with classes.</p>
+
+
+<h2>Can you explain the difference between "functional programming" and "object-oriented programming" in JavaScript?</h2>
+<p>In programming, there are generally two main paradigms: functional programming and object-oriented programming. These paradigms are different approaches to organizing and structuring code, and each has its own set of principles and practices.
+
+Functional programming is a programming paradigm that is based on the idea of treating computation as the evaluation of mathematical functions. In functional programming, functions are first-class citizens, which means that they can be treated like any other value (e.g., they can be passed as arguments to other functions, returned as values from functions, etc.). Functional programming emphasizes immutability (the idea that data should not be changed once it is created) and the use of pure functions (functions that do not have any side effects and always return the same output for a given input).
+
+Object-oriented programming (OOP) is a programming paradigm that is based on the idea of organizing code around the concept of "objects". In OOP, objects are self-contained units that have their own state (data) and behavior (methods). Objects can interact with each other by sending and receiving messages (method calls). OOP emphasizes encapsulation (the idea of hiding implementation details behind an interface) and inheritance (the ability to create new objects that are based on existing objects).</p>
+
+
+<h2>Can you explain the concept of "currying" in JavaScript, and how it can be used to create reusable functions?</h2>
+<p>In JavaScript (and other functional programming languages), "currying" is the process of transforming a function with multiple arguments into a sequence of functions that each take a single argument. This allows you to create reusable functions that can be partially applied, or called with a subset of their arguments.
+
+Here's an example of a function that takes two arguments and returns their sum:</p>
+
+
+```javascript
+function add(x, y) {
+  return x + y;
+}
+
+console.log(add(1, 2)); // 3
+```
+
+<p>To curry this function, you can create a new function that takes a single argument and returns a function that takes another argument:</p>
+
+
+```javascript
+function curry(x) {
+  return function(y) {
+    return x + y;
+  };
+}
+
+const add = curry(1);
+
+console.log(add(2)); // 3
+```
+
+
+<p>In this example, the curry function returns a new function that adds its argument to the value of x. This allows you to partially apply the add function by calling it with a single argument, creating a new function that is waiting for the second argument.
+
+Currying can be useful for creating reusable functions that can be customized by partially applying them with some of their arguments. It can also make it easier to create functions that can be composed with other functions, as you can create a function that is customized for a specific use case and then pass it as an argument to another function.</p>
 
 
 
