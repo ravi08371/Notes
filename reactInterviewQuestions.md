@@ -114,3 +114,164 @@ The useIsomorphicLayoutEffect hook is similar to the useLayoutEffect hook, but i
 The useResponder hook is used to create a custom event responder in a functional component in React.js. It takes a responder configuration object as an argument, and returns an object with methods that can be called to activate or deactivate the responder. The responder can be used to handle events such as gestures or keyboard input.
 
   </p>
+
+
+<h2>react hooks with example</h2>
+<p>1-- useState: This hook allows you to add state to functional components. It returns an array with two elements: the current state value and a function to update it.</p>
+
+
+```javascript
+import { useState } from 'react';
+
+function Example() {
+  // Declare a new state variable, which we'll call "count"
+  const [count, setCount] = useState(0);
+
+  return (
+    <div>
+      <p>You clicked {count} times</p>
+      <button onClick={() => setCount(count + 1)}>
+        Click me
+      </button>
+    </div>
+  );
+}
+```
+
+
+<p>2-- useEffect: This hook allows you to perform side effects in functional components. It takes a function as an argument and is called after every render.</p>
+
+```javascript
+import { useEffect, useState } from 'react';
+
+function Example() {
+  const [count, setCount] = useState(0);
+
+  // Similar to componentDidMount and componentDidUpdate:
+  useEffect(() => {
+    // Update the document title using the browser API
+    document.title = `You clicked ${count} times`;
+  });
+
+  return (
+    <div>
+      <p>You clicked {count} times</p>
+      <button onClick={() => setCount(count + 1)}>
+        Click me
+      </button>
+    </div>
+  );
+}
+```
+
+<p>3-- useContext: This hook allows you to access the context value in a functional component. It takes the context object as an argument and returns the current context value for that context.</p>
+
+
+``javascript
+import { useContext } from 'react';
+
+const MyContext = React.createContext();
+
+function Example() {
+  const value = useContext(MyContext);
+
+  return (
+    <div>
+      {value}
+    </div>
+  );
+}
+```
+
+
+<p>4-- useReducer: This hook allows you to use a reducer function in a functional component. It takes a reducer function and an initial state as arguments and returns the current state and a dispatch function.</p>
+
+```javascript
+import { useReducer } from 'react';
+
+function reducer(state, action) {
+  switch (action.type) {
+    case 'increment':
+      return { count: state.count + 1 };
+    case 'decrement':
+      return { count: state.count - 1 };
+    default:
+      throw new Error();
+  }
+}
+
+function Example() {
+  const [state, dispatch] = useReducer(reducer, { count: 0 });
+
+  return (
+    <div>
+      <p>Count: {state.count}</p>
+      <button onClick={() => dispatch({ type: 'increment' })}>+</button>
+      <button onClick={() => dispatch({ type: 'decrement' })}>-</button>
+    </div
+```
+
+<p>5-- useCallback: This hook returns a memoized version of a callback function. It is useful when you want to optimize the performance of a component by avoiding unnecessary re-renders.</p>
+
+```javascript
+import { useCallback } from 'react';
+
+function Example({ onClick }) {
+  // The useCallback hook ensures that the onClick prop
+  // does not change between renders, so the component
+  // will not re-render unnecessarily
+  const handleClick = useCallback(() => onClick(), [onClick]);
+
+  return (
+    <button onClick={handleClick}>
+      Click me
+    </button>
+  );
+}
+```
+
+
+<p>6-- useMemo: This hook returns a memoized value. It is useful when you want to optimize the performance of a component by avoiding unnecessary calculations.</p>
+
+```javascript
+import { useMemo } from 'react';
+
+function Example({ data }) {
+  // The useMemo hook ensures that the expensiveData
+  // variable is only recalculated if the data prop changes
+  const expensiveData = useMemo(() => computeExpensiveData(data), [data]);
+
+  return (
+    <div>
+      {expensiveData}
+    </div>
+  );
+}
+```
+
+
+<p>7-- useRef: This hook returns a mutable ref object whose .current property is initialized to the passed argument (initialValue). The returned object will persist for the full lifetime of the component.</p>
+
+```javascript
+import { useRef } from 'react';
+
+function Example() {
+  // The useRef hook creates a mutable ref object
+  const inputEl = useRef(null);
+
+  function handleClick() {
+    // You can now use the ref to set the focus on the input element
+    inputEl.current.focus();
+  }
+
+  return (
+    <div>
+      <input ref={inputEl} type="text" />
+      <button onClick={handleClick}>
+        Focus the input
+      </button>
+    </div>
+  );
+}
+```
+
