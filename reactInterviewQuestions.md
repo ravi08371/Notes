@@ -167,7 +167,7 @@ function Example() {
 <p>3-- useContext: This hook allows you to access the context value in a functional component. It takes the context object as an argument and returns the current context value for that context.</p>
 
 
-``javascript
+```javascript
 import { useContext } from 'react';
 
 const MyContext = React.createContext();
@@ -185,6 +185,8 @@ function Example() {
 
 
 <p>4-- useReducer: This hook allows you to use a reducer function in a functional component. It takes a reducer function and an initial state as arguments and returns the current state and a dispatch function.</p>
+
+
 
 ```javascript
 import { useReducer } from 'react';
@@ -211,7 +213,10 @@ function Example() {
     </div
 ```
 
+
 <p>5-- useCallback: This hook returns a memoized version of a callback function. It is useful when you want to optimize the performance of a component by avoiding unnecessary re-renders.</p>
+
+
 
 ```javascript
 import { useCallback } from 'react';
@@ -232,6 +237,8 @@ function Example({ onClick }) {
 
 
 <p>6-- useMemo: This hook returns a memoized value. It is useful when you want to optimize the performance of a component by avoiding unnecessary calculations.</p>
+
+
 
 ```javascript
 import { useMemo } from 'react';
