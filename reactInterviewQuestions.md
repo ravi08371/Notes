@@ -139,7 +139,10 @@ function Example() {
 ```
 
 
-<p>2-- useEffect: This hook allows you to perform side effects in functional components. It takes a function as an argument and is called after every render.</p>
+<p>2-- useEffect is a hook in React that allows you to perform side effects in functional components. It is called inside a function component after every render, and it takes a function as an argument. This function is called the "effect" function, and it is where you can perform any side effects that are needed, such as fetching data, setting up subscriptions, and more.The useEffect hook takes a second argument, which is an array of dependencies. If any of the dependencies in the array change, the effect function will be re-run. In this example, we pass an empty array, which means that the effect function will only be run once, when the component is first mounted.
+
+  useEffect is a very powerful and versatile hook that can be used to perform a wide range of side effects in your components. It is particularly useful for handling asynchronous tasks, such as fetching data and setting up subscriptions, as well as for cleaning up after those tasks when the component unmounts.
+</p>
 
 ```javascript
 import { useEffect, useState } from 'react';
@@ -165,6 +168,7 @@ function Example() {
 ```
 
 <p>3-- useContext: This hook allows you to access the context value in a functional component. It takes the context object as an argument and returns the current context value for that context.</p>
+<p>In this example, we create a new context using React.createContext and provide a value for it using the MyContext.Provider component. The Child component uses the useContext hook to access the value of the context.useContext is a very useful hook that can help you avoid prop drilling, which is the process of passing props down through multiple levels of components in your application just to make them available to a child component. By using context, you can make the data available to the child component directly, without the need to pass it down through multiple levels of components.</p>
 
 
 ```javascript
@@ -181,10 +185,19 @@ function Example() {
     </div>
   );
 }
+function Parent() {
+  return (
+    <MyContext.Provider value="Hello, world!">
+      <Child />
+    </MyContext.Provider>
+  );
+}
 ```
 
 
 <p>4-- useReducer: This hook allows you to use a reducer function in a functional component. It takes a reducer function and an initial state as arguments and returns the current state and a dispatch function.</p>
+<p>In this example, we define a reducer function that takes a state and an action as arguments and returns a new state based on the action type. We then use the useReducer hook to manage the state of the component, passing in the reducer function and an initial state as arguments.The useReducer hook returns an array with two elements: the current state and a dispatch function. We can update the state by calling the dispatch function and passing in an action object with a type property. In this example, we dispatch an action with a type of 'increment' or 'decrement' to update the state accordingly.</p>
+<p>useReducer is a useful hook for managing state in your components, particularly when you have complex state logic that involves multiple actions and updates to the state. It can help make your code more readable and easier to understand, as you can define all of your state logic in a single reducer function.</p>
 
 
 
@@ -214,8 +227,9 @@ function Example() {
 ```
 
 
-<p>5-- useCallback: This hook returns a memoized version of a callback function. It is useful when you want to optimize the performance of a component by avoiding unnecessary re-renders.</p>
-
+<p>5-- useCallback: This hook returns a memoized version of a callback function.It is called inside a function component and takes a function as an argument. It returns a function that will only change if one of the dependencies passed to the hook has changed. It is useful when you want to optimize the performance of a component by avoiding unnecessary re-renders.</p>
+<p>In this example, we use the useCallback hook to create a new function called handleClick that wraps the onClick prop. The useCallback hook ensures that the handleClick function will only change if the onClick prop changes.</p>
+<p>useCallback is particularly useful when you have components that are connected to an external data source, such as an API, and you want to avoid unnecessary re-fetches of the data. It can also be useful in situations where you have a component that is called frequently and you want to avoid unnecessary re-renders to improve the performance of your application.</p>
 
 
 ```javascript
@@ -236,7 +250,8 @@ function Example({ onClick }) {
 ```
 
 
-<p>6-- useMemo: This hook returns a memoized value. It is useful when you want to optimize the performance of a component by avoiding unnecessary calculations.</p>
+<p>6-- useMemo: This hook returns a memoized value.It is called inside a function component and takes a function and an array of dependencies as arguments. It returns the result of the function, but it only re-runs the function if one of the dependencies has changed. It is useful when you want to optimize the performance of a component by avoiding unnecessary calculations.</p>
+<p>useMemo is particularly useful when you have components that are expensive to render, such as those that perform a lot of calculations or those that render large lists of data. It can help improve the performance of your application by avoiding unnecessary calculations and re-renders.</p>
 
 
 
@@ -258,6 +273,8 @@ function Example({ data }) {
 
 
 <p>7-- useRef: This hook returns a mutable ref object whose .current property is initialized to the passed argument (initialValue). The returned object will persist for the full lifetime of the component.</p>
+<p>Overall, the useRef hook is a useful tool for creating mutable references to DOM elements or values in functional components. It can be used to store values that need to be accessed across renders, or to manipulate DOM elements directly.</p>
+
 
 ```javascript
 import { useRef } from 'react';
