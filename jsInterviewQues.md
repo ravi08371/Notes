@@ -366,3 +366,23 @@ The type of null is "object," while the type of undefined is "undefined."</p>
 
 <h2> What is memorization?</h2>
 <p>memorization refers to the process of storing data in memory so that it can be accessed quickly and easily. In JavaScript, you can use variables to store and access data in memory. For example, you can use a variable to store a value, such as a number or a string, and then use that variable to retrieve the value later on in your code.</p>
+
+<h2>What is Scope in JavaScript</h2>
+<p>In JavaScript, scope refers to the visibility and accessibility of variables and other identifiers within a program. There are two types of scope in JavaScript: global scope and local scope.
+
+Global scope refers to the visibility and accessibility of variables and other identifiers throughout an entire program. Variables and identifiers that are defined outside of any function or block of code are said to have global scope, which means that they can be accessed and modified from anywhere in the program.
+
+Local scope, on the other hand, refers to the visibility and accessibility of variables and other identifiers within a specific block of code or function. Variables and identifiers that are defined within a function or block of code are said to have local scope, which means that they can only be accessed and modified within that specific block of code or function.</p>
+
+<h2>What is the difference between local storage and session storage?</h2>
+<p>In a web browser, local storage and session storage are two types of storage that can be used to store data locally in the browser. Both local storage and session storage allow you to store key-value pairs of data, but they differ in the way that the data is persisted and the lifetime of the data.
+
+Here are the main differences between local storage and session storage:
+
+Persistence: Local storage persists data even after the browser is closed, while session storage only persists data for the duration of the current browsing session.
+
+Lifetime: Local storage has no expiration date, so the data stored in local storage will remain there until it is explicitly removed by the user or the browser. Session storage, on the other hand, only persists data for the duration of the current browsing session, which ends when the user closes the browser or tab.
+
+Availability: Local storage and session storage are both available on all modern browsers, but they are specific to the origin (i.e., the domain and protocol) of the web page that created them. This means that data stored in local storage or session storage by one web page will not be available to other web pages from different origins.</p>
+
+
