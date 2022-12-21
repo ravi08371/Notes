@@ -363,3 +363,6 @@ Currying can be useful for creating reusable functions that can be customized by
 2-- undefined is a value that is automatically assigned to a variable that has not been assigned a value. It is an implicit representation of "no value."
 
 The type of null is "object," while the type of undefined is "undefined."</p>
+
+<h2> What is memorization?</h2>
+<p>memorization refers to the process of storing data in memory so that it can be accessed quickly and easily. In JavaScript, you can use variables to store and access data in memory. For example, you can use a variable to store a value, such as a number or a string, and then use that variable to retrieve the value later on in your code.</p>
