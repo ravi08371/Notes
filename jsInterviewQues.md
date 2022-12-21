@@ -426,3 +426,65 @@ doSomething(() => {
 ```
 
 
+<h2>Explain the call(), apply(), and bind() methods in javascript</h2>
+<p>In JavaScript, the call(), apply(), and bind() methods allow you to invoke a function with a specific this value and arguments.
+
+Here is a brief summary of each method:</p>
+<p>call()
+The call() method invokes a function and allows you to specify the this value for the function as well as any arguments that the function should receive. The syntax for the call() method is as follows:</p>
+
+
+```javascript
+functionName.call(thisValue, arg1, arg2, ...);
+
+function greet(greeting) {
+  console.log(greeting + ' ' + this.name);
+}
+
+let person = { name: 'John' };
+
+greet.call(person, 'Hello');  // logs "Hello John"
+```
+
+
+<p>In this example, the call() method is used to invoke the greet() function with person as the this value and the string 'Hello' as the first argument.</p>
+
+<p>apply()
+The apply() method is similar to the call() method, but it allows you to pass arguments to the function as an array rather than as separate arguments. The syntax for the apply() method is as follows:</p>
+
+
+
+```javascript
+functionName.apply(thisValue, [arg1, arg2, ...]);
+
+function greet(greeting) {
+  console.log(greeting + ' ' + this.name);
+}
+
+let person = { name: 'John' };
+
+greet.apply(person, ['Hello']);  // logs "Hello John"
+```
+
+<p>In this example, the apply() method is used to invoke the greet() function with person as the this value and the string 'Hello' as the first element of the array passed as the second argument.</p>
+
+<p>bind()
+The bind() method creates a new function that, when called, has its this value set to the provided value and its arguments set to the provided arguments. The syntax for the bind() method is as follows:</p>
+
+
+```javascript
+functionName.bind(thisValue, arg1, arg2, ...);
+
+function greet(greeting) {
+  console.log(greeting + ' ' + this.name);
+}
+
+let person = { name: 'John' };
+let sayHello = greet.bind(person, 'Hello');
+
+sayHello();  // logs "Hello John"
+```
+
+
+<p>n this example, the bind() method is used to create a new function called sayHello that is bound to the person object as the this value and the string 'Hello' as the first argument. When sayHello() is called, it logs "Hello John".</p>
+
