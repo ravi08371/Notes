@@ -357,4 +357,9 @@ console.log(add(2)); // 3
 Currying can be useful for creating reusable functions that can be customized by partially applying them with some of their arguments. It can also make it easier to create functions that can be composed with other functions, as you can create a function that is customized for a specific use case and then pass it as an argument to another function.</p>
 
 
+<h2>What is the difference between the null and the undefined values?</h2>
+<p>1-- null is a value that represents the intentional absence of an object value. It is an explicit representation of "no value."
 
+2-- undefined is a value that is automatically assigned to a variable that has not been assigned a value. It is an implicit representation of "no value."
+
+The type of null is "object," while the type of undefined is "undefined."</p>
