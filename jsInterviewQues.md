@@ -488,3 +488,10 @@ sayHello();  // logs "Hello John"
 
 <p>n this example, the bind() method is used to create a new function called sayHello that is bound to the person object as the this value and the string 'Hello' as the first argument. When sayHello() is called, it logs "Hello John".</p>
 
+
+<h2>What is the difference between async and defer?</h2>
+<p>In async, while parsing HTML, the browser fetches the script from the network asynchronously if we encounter a script. After fetching the script, the browser stops parsing HTML and executes the script. After executing the script, the browser resumes the HTML parsing.
+
+In defer, while parsing HTML, the browser fetches the script from the network asynchronously if we encounter a script. The browser executes the scripts only after parsing the HTML.</p>
+
+
