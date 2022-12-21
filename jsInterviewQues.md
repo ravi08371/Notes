@@ -385,4 +385,44 @@ Lifetime: Local storage has no expiration date, so the data stored in local stor
 
 Availability: Local storage and session storage are both available on all modern browsers, but they are specific to the origin (i.e., the domain and protocol) of the web page that created them. This means that data stored in local storage or session storage by one web page will not be available to other web pages from different origins.</p>
 
+<h2>What are async and await in javascript?</h2>
+<p>async and await are keywords in JavaScript that are used to handle asynchronous code. Asynchronous code is code that runs in a separate, non-blocking thread, allowing other code to run concurrently while the asynchronous code is being executed.
+
+async is used to declare a function as asynchronous. An async function returns a Promise, which is an object that represents a value that may be available in the future. Async functions can be used with the await operator to pause execution of the function until the Promise is fulfilled.</p>
+
+<h2>What is callback hell?</h2>
+<p>Callback hell is a term used to describe a situation in JavaScript where the code becomes deeply nested and difficult to read due to the use of too many callback functions. Callback functions are functions that are passed as arguments to other functions and are executed when a certain event or operation completes. They are often used in JavaScript to handle asynchronous code.</p>
+
+
+```javascript
+function doSomething(callback) {
+  setTimeout(() => {
+    console.log('Doing something...');
+    callback();
+  }, 1000);
+}
+
+function doSomethingElse(callback) {
+  setTimeout(() => {
+    console.log('Doing something else...');
+    callback();
+  }, 1000);
+}
+
+function doAnotherThing(callback) {
+  setTimeout(() => {
+    console.log('Doing another thing...');
+    callback();
+  }, 1000);
+}
+
+doSomething(() => {
+  doSomethingElse(() => {
+    doAnotherThing(() => {
+      console.log('Done!');
+    });
+  });
+});
+```
+
 
