@@ -495,3 +495,5 @@ sayHello();  // logs "Hello John"
 In defer, while parsing HTML, the browser fetches the script from the network asynchronously if we encounter a script. The browser executes the scripts only after parsing the HTML.</p>
 
 
+<h2>what is event loop?</h2>
+<p>The event loop is an important aspect of JavaScript's single-threaded model, which means that JavaScript can only execute one task at a time. However, the event loop allows JavaScript to perform asynchronous tasks without blocking the execution of other code. This makes it possible for JavaScript to handle multiple events concurrently and provide a responsive user experience.</p>
