@@ -497,3 +497,27 @@ In defer, while parsing HTML, the browser fetches the script from the network as
 
 <h2>what is event loop?</h2>
 <p>The event loop is an important aspect of JavaScript's single-threaded model, which means that JavaScript can only execute one task at a time. However, the event loop allows JavaScript to perform asynchronous tasks without blocking the execution of other code. This makes it possible for JavaScript to handle multiple events concurrently and provide a responsive user experience.</p>
+
+<h2>What is an event delegation?</h2>
+<p>Event delegation is a technique in JavaScript that allows you to attach a single event listener to a parent element, rather than attaching event listeners to each individual child element. This can be useful when you have a large number of elements that need to handle the same event and you want to avoid adding a separate event listener to each element.</p>
+
+
+```javascript
+<ul id="list">
+  <li>Item 1</li>
+  <li>Item 2</li>
+  <li>Item 3</li>
+</ul>
+
+<script>
+  // Attach a click event listener to the parent element
+  document.getElementById("list").addEventListener("click", function(event) {
+    // Check if the clicked element is a list item
+    if (event.target.tagName === "LI") {
+      console.log("List item clicked!");
+    }
+  });
+</script>
+```
+
+
