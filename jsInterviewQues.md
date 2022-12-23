@@ -521,3 +521,58 @@ In defer, while parsing HTML, the browser fetches the script from the network as
 ```
 
 
+<h2> Write a function that transforms a given string into a camel case</h2>
+
+
+```javascript
+function toCamelCase(string) {
+  const arr = string.split(' ');
+
+  const upperCase = arr.map((x, i) => {
+    if (i === 0) return x;
+    else return x.charAt(0).toUpperCase() + x.slice(1);
+  })
+
+  return upperCase.join('');
+}
+console.log(toCamelCase("ravi singh king"));//ans:- "raviSinghKing"
+```
+
+
+<h2>Write a function to generate a random number within a given range provided as an argument.</h2>
+
+
+```javascript
+function random(x,y){
+  return Math.floor(Math.random() * (y - x + 1)) + x;
+}
+console.log(random(4,10));
+```
+
+
+<h2>Write a function deepCompare that takes two objects as an argument and compares them.</h2>
+<p>It deeply compares two object</p>
+
+
+```javascript
+function deepCompare(obj1,obj2){
+  return JSON.stringify(obj1) === JSON.stringify(obj2);
+}
+console.log({name:"ravi"},{name:"ravi"});// it gives true because before checking it is converting obj to string
+```
+
+
+<h2>Write a function that removes duplicates from an array without using Set.
+</h2>
+
+
+```javascript
+let arr = [2,3,4,5,5,5,6,6,7,2,1,2];
+function removeDuplicate(arr){
+  return arr.filter((x,i) => arr.indexOf(x) === i);
+}
+console.log(removeDuplicates(arr));
+```
+
+
+
