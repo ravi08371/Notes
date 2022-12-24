@@ -42,7 +42,7 @@ The render method is a required method in a React.js component that returns the 
 <h2>How can you pass data from a parent component to a child component in React.js?</h2>
 In React.js, you can pass data from a parent component to a child component using props. Props are properties that are passed from the parent component to the child component as attributes on the JSX element. The child component can then access the props using this.props.
 
-<h2>What is the difference between a functional and a class-based component in React.js?,/h2>
+<h2>What is the difference between a functional and a class-based component in React.js?</h2>
 A functional component is a function that returns a JSX element, while a class-based component is a class that extends the React.Component class and has a render method that returns a JSX element. Class-based components have additional features, such as the ability to maintain state and have lifecycle methods.
 
   <h2>What is the difference between a prop and a state in React.js?</h2>
