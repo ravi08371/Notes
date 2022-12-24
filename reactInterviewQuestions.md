@@ -1,6 +1,7 @@
 <p>
 <h2>What is React.js?</h2>
 React.js is a JavaScript library for building user interfaces. It was developed by Facebook and is often used for building single-page applications and mobile applications.
+React allows developers to create reusable UI components. It uses a virtual DOM (a lightweight in-memory representation of the actual DOM) to improve performance by reducing the number of costly DOM manipulations required to update the user interface
 
 <h2>What are the advantages of using React.js?</h2>
 There are several advantages to using React.js, including:
