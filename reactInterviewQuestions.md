@@ -303,3 +303,31 @@ function Example() {
 }
 ```
 
+
+
+<h2>what is prop drilling and how can we overcome that by context api</h2>
+
+<p>Prop drilling (also known as "prop tunneling") refers to the process of passing props down through multiple levels of nested components in a React application. This can become cumbersome and difficult to manage, especially in large applications with many layers of nested components.
+
+One way to overcome prop drilling is to use the Context API, which allows you to share values between components without having to pass props down through the component tree. The Context API provides a way to "create" and "consume" values that are accessible to all components within a certain "context."
+
+To use the Context API, you first need to create a context object using the createContext function. This context object has two components: a Provider and a Consumer. The Provider component is used to provide the value to the context, and the Consumer component is used to consume the value from the context.</p>
+
+
+```javascript
+import { createContext } from 'react';
+
+const MyContext = createContext();
+
+// The Provider component
+<MyContext.Provider value={'hello'}>
+  <MyComponent />
+</MyContext.Provider>
+
+// The Consumer component
+<MyContext.Consumer>
+  {value => <div>{value}</div>}
+</MyContext.Consumer>
+```
+
+
