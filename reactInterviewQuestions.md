@@ -12,6 +12,9 @@ It has a large and active community, which means there are many resources availa
 <h2>What is the difference between a stateful and a stateless component?</h2>
 A stateful component is a component that maintains its own internal state, while a stateless component is a component that does not maintain any internal state and simply receives props from its parent component.
 
+
+<h2>what is need of hooks in react</h2>
+<p>Hooks are a new feature in React that were introduced in React 16.8. They provide a way to manage state and side effects in functional components, which are functions that return JSX elements. Prior to the introduction of hooks, managing state and side effects in functional components required the use of props, higher-order components, or class-based components, which could make the code more complex and difficult to understand.</p>
 <h2>How does the virtual DOM work in React.js?</h2>
 The virtual DOM is a lightweight in-memory representation of the actual DOM. When a component's state changes, the virtual DOM creates a new virtual tree, which is then compared to the previous virtual tree. The virtual DOM then identifies the minimal number of DOM manipulations required to update the actual DOM to match the new virtual tree, and makes those changes. This helps to optimize performance by minimizing the number of DOM manipulations required.
 
